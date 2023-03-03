@@ -6,14 +6,14 @@ taken to diagnose COVID-19 which helps in the process of Isolation and Treatment
 to the patient. Using Convolution neural network, the suspected patient’s CT scan can be
 distinguished between a Non COVID patient and a COVID-19 patient. As COVID-19 is
 an ongoing and new pandemic, the available datasets are insufficient and imbalanced to
-train the model effectively, To deal with the data scarcity problem two strategies are used
+train the model effectively, To deal with the data scarcity problem two strategies are used.
 
 1) TransferLearning
 
-where pre-trained neural network are re-trained to fit other dataset, This approach achieves
-greater performance with datasets of a limited size. The Literature Survey done above 
-also shows that through transfer learning effective performance can be achieved when compared to
-any other method. Transfer Learning is an approach
+where pre-trained neural network are re-trained to fit other dataset, This approach 
+achieves greater performance with datasets of a limited size. The Literature Survey 
+done above also shows that through transfer learning effective performance can be achieved 
+when compared toany other method. Transfer Learning is an approach
 The main application of transfer learning is the classification of
 medical images for emerging diseases due to the limited availability of samples,
 Transfer learning has the benefit that the training time of the model decreases and
@@ -41,4 +41,23 @@ and after image augmentation.
 
  When we trained many models with our dataset for 11 epochs and batch size as 16,
  then we found that VGG19 and ResNet101V2 gave almost the same validation accuracy,
- but the validation loss for VGG19 was lower when compared to ResNet101V2
+ but the validation loss for VGG19 was lower when compared to ResNet101V2.
+ ![image](https://user-images.githubusercontent.com/76189053/222824035-9a46b793-4022-4f65-8373-b946c832e3b2.png)
+![image](https://user-images.githubusercontent.com/76189053/222824105-ca135f90-1ad6-416e-b3d3-bfbd66785f2d.png)
+
+Then we plot the validation loss and training loss with the batch size as 32, in-order to decrease the jitter
+ ![image](https://user-images.githubusercontent.com/76189053/222824239-d2076118-9af6-4098-8396-6b54d97266df.png)
+
+ From this graph we can see that the both the validation loss and training loss are in downward trend till 100 epochs
+ and the validation loss starts to follow an upward trend after 100 epochs which indicates the overfitting of the model,
+ so we need to train the model till 100 epochs only. 
+ When we run the model for 100 epochs with the above mentioned parameters we get the validation accuracy around 97%
+ 
+ ![image](https://user-images.githubusercontent.com/76189053/222824512-6d914aa2-89dd-46c3-9fbf-a7e6bad3c5e6.png)
+ 
+ This shows that our model is still applicable with limited data, which is characteristic of the real situation,
+ where large and diverse datasets may not be readily available. VGG 19, ResNet101V2 and Xception are the pre-trained 
+ models that are tested in COVID-19 detection and found out that VGG19 performs well when compared to other models. 
+ We had built an end-to-end system using deep learning mechanisms which can be utilized in the primary hotspots 
+ to identify COVID-19 cases.
+
