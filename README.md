@@ -36,3 +36,9 @@ the image by 0.2. Image Augmentation helps to reduce overfitting and serves as a
 regularizer. The literature survey done above states that augmenting the dataset
 can increase the accuracy of the model by comparing the accuracy achieved before
 and after image augmentation.
+
+##RESULT
+
+ When we trained many models with our dataset for 11 epochs and batch size as 16,
+ then we found that VGG19 and ResNet101V2 gave almost the same validation accuracy,
+ but the validation loss for VGG19 was lower when compared to ResNet101V2
