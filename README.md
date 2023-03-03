@@ -42,10 +42,22 @@ and after image augmentation.
  When we trained many models with our dataset for 11 epochs and batch size as 16,
  then we found that VGG19 and ResNet101V2 gave almost the same validation accuracy,
  but the validation loss for VGG19 was lower when compared to ResNet101V2.
+ 
  ![image](https://user-images.githubusercontent.com/76189053/222824035-9a46b793-4022-4f65-8373-b946c832e3b2.png)
 ![image](https://user-images.githubusercontent.com/76189053/222824105-ca135f90-1ad6-416e-b3d3-bfbd66785f2d.png)
 
+When we plot the graph for training loss and validation loss, we can see that in ResNet101V2 the validation 
+loss is increasing and the training loss is decreasing with the number of epochs, this indicates that the 
+model is overfitting, i.e.The model starts to memorize the images instead of learning from the images, 
+this could be due to very high number of layers (101 layers) ,i.e.The model is too complex.
+Hence we go for the VGG19 as our pre-trained model. Now we need to increase the accuracy of the model, 
+so we train the model for higher number of epochs till the validation loss is not increasing.
+
+![image](https://user-images.githubusercontent.com/76189053/222825162-8cbd07bc-a662-4bee-aa94-695178eb3705.png)
+
+
 Then we plot the validation loss and training loss with the batch size as 32, in-order to decrease the jitter
+
  ![image](https://user-images.githubusercontent.com/76189053/222824239-d2076118-9af6-4098-8396-6b54d97266df.png)
 
  From this graph we can see that the both the validation loss and training loss are in downward trend till 100 epochs
