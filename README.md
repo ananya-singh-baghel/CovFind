@@ -37,7 +37,7 @@ regularizer. The literature survey done above states that augmenting the dataset
 can increase the accuracy of the model by comparing the accuracy achieved before
 and after image augmentation.
 
-## RESULT
+## METHODOLOGY
 
  When we trained many models with our dataset for 11 epochs and batch size as 16,
  then we found that VGG19 and ResNet101V2 gave almost the same validation accuracy,
@@ -67,6 +67,7 @@ Then we plot the validation loss and training loss with the batch size as 32, in
  
  ![image](https://user-images.githubusercontent.com/76189053/222824512-6d914aa2-89dd-46c3-9fbf-a7e6bad3c5e6.png)
  
+ ## RESULT
  This shows that our model is still applicable with limited data, which is characteristic of the real situation,
  where large and diverse datasets may not be readily available. VGG 19, ResNet101V2 and Xception are the pre-trained 
  models that are tested in COVID-19 detection and found out that VGG19 performs well when compared to other models. 
