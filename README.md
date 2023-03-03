@@ -37,7 +37,7 @@ regularizer. The literature survey done above states that augmenting the dataset
 can increase the accuracy of the model by comparing the accuracy achieved before
 and after image augmentation.
 
-# RESULT
+## RESULT
 
  When we trained many models with our dataset for 11 epochs and batch size as 16,
  then we found that VGG19 and ResNet101V2 gave almost the same validation accuracy,
